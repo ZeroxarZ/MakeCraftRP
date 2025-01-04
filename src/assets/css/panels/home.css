@@ -151,12 +151,16 @@
     height: 37px;
     border-radius: 20px;
     border: none;
-    background: #00bd7a;
+    background: #b9e5ff !important;
     font: normal normal bold 20px/25px Poppins;
     color: #121212;
     margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    box-shadow: 0 0 5px #b9e5ff !important;
     cursor: pointer;
+}
+
+.play-btn:hover {
+    background: #a3dcfd !important;
 }
 
 .download-content {
@@ -186,7 +190,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
+    background-color: #b9e5ff;
     border-radius: 10px;
 }
 
@@ -578,7 +582,59 @@ body::-webkit-scrollbar {
     width: 100%;
     justify-content: center;
 }
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.social > a {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    background-color: lightgray;
+    opacity: 0.8;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black
+}
+
+.social > a:hover {
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+}
+
+.social > a > svg {
+    width: calc(100% - 10px);
+    height: auto;
+    fill: white;
+}
+
+.social > a.discord-btn {
+    background: -webkit-linear-gradient(90deg, #7289DA,#5865F2);
+}
+
+.social > a.instagram-btn {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);;
+}
+
+.social > a.tiktok-btn {
+    background: linear-gradient(90deg, rgba(255,0,80,1) 0%, rgba(0,242,234,1) 100%);;
+}
+
+.social > a.web-btn { 
+    background-color: #0f75c5;
+}
 
 @keyframes scroll {
     0% {

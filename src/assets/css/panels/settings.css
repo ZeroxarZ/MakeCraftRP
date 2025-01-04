@@ -9,40 +9,37 @@ body {
     flex-direction: column;
     background: #00000080;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .tab-btn-css {
-    width: 150px;
-    height: 50px;
-    margin: 10px 0;
-    background: #00bd7a;
-    border: none;
-    text-align: center;
+    width: calc(100% - 20px);
+    padding: 0 5px;
+    background: #b9e5ff;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     outline: none;
-    border-radius: 25px;
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 10px;
     align-items: center;
-    padding: 0 10px;
-    transition: background 0.3s, transform 0.2s;
+    opacity: 0.8;
+    border: none;
 }
 
 .tab-btn-css:hover {
-    background: #006e47;
+    background: #b9e5ff;
     transform: scale(1.05);
 }
 
 .active-tab-btn {
-    background: #006e47;
-    box-shadow: 0 0 10px #ffffff;
+    scale: 0.95;
 }
 
 .active-tab-btn:hover {
-    background: #006e47;
-    transform: scale(1.05);
+    background: #a3dcfd;
+    opacity: 1;
 }
 
 .tabs-settings-content {
@@ -60,13 +57,19 @@ body {
 }
 
 .tab-btn-css i {
-    font-size: 24px;
-    margin-right: 5px;
+    padding: 5px;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tab-btn-css span {
-    font-size: 14px;
-    color: #000000;
+    font: normal normal bold 15px Poppins;
+    color: black;
+    /*white-space: nowrap;*/
+    text-align: left;
 }
 
 .active-tab-content {
@@ -76,7 +79,7 @@ body {
 
 .save-tabs-btn {
     margin-top: auto;
-    width: 150px;
+    margin-bottom: 10px;
 }
 
 .information {
@@ -87,7 +90,9 @@ body {
 
 .title-settings {
     text-align: center;
-    font: bold 20px/25px 'Roboto Mono', sans-serif; /* Utilisez Montserrat */
+    font-family: 'arial';
+    font-size: 30px;
+    font-weight: bold;
     color: #F1F1F1;
     margin: 2% 0;
 }
@@ -98,7 +103,7 @@ body {
 }
 
 .settings-content-scroll {
-    overflow: hidden; /* Pas de défilement pour cette section */
+    overflow: auto;
     width: 100%;
     height: 100%;
 }
@@ -134,6 +139,12 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
 }
+.add-account:hover {
+    background-color: #00bd7a;
+    box-shadow: 1px 2px 5px #00bd7a;
+    color: #121212;
+    scale: 0.98;
+}
 
 .accounts {
     display: contents;
@@ -142,10 +153,9 @@ body {
 
 .account {
     display: inline-block;
-    background: #00bd7a;
-    box-shadow: 0 0 5px #006e47;
-    border: 4px solid #00bd7a;
-    font: normal normal bold 30px/40px Poppins;
+    background: rgb(253, 40, 40);
+    opacity: 0.7;
+    font-family: 'arial';
     width: 500px;
     height: 100px;
     margin: 1% 2%;
@@ -154,9 +164,7 @@ body {
 }
 
 .account:hover {
-    background: #006e47;
-    box-shadow: 0 0 5px #006e47;
-    border: 4px solid #006e47;
+    scale: 0.99;
 }
 
 .account-image {
@@ -596,11 +604,11 @@ body {
     height: 60px;
     border: none;
     border-radius: 30px;
-    background: #00bd7a;
+    background: #b9e5ff;
     color: #000000;
     font: normal normal bold 20px/25px Poppins;
     cursor: pointer;
-    box-shadow: 0 0 5px #006e47;
+    box-shadow: 0 0 5px #b9e5ff;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     display: flex;
     justify-content: center;
@@ -608,7 +616,7 @@ body {
 }
 
 .upload-skin-btn:hover {
-    background: #006e47;
-    box-shadow: 0 0 10px #006e47;
+    background: #b9e5ff;
+    box-shadow: 0 0 10px #b9e5ff;
     transform: scale(1.05);
 }

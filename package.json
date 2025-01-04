@@ -1,11 +1,11 @@
 {
-    "name": "Conflictura",
-    "preductname": "Conflictura Launcher",
-    "version": "3.0.0",
-    "description": "Conflictura modded server launcher",
+    "name": "MakeCraftRP",
+    "preductname": "MakeCraftRP Launcher",
+    "version": "1.0.0",
+    "description": "Serveur Minecraft RolePlay",
     "main": "src/app.js",
-    "author": "Riptiaz/Boulldogo/Vexato/Luuxis",
-    "settings": "http://localhost/panel",
+    "author": "ZeroxarZ",
+    "settings": "https://api.makecraftrp.com/paneladmin",
     "engines": {
         "node": "20.x.x"
     },
@@ -34,6 +34,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+        "url": "git+https://github.com/ZeroxarZ/MakeCraftRP.git"
     }
 }
