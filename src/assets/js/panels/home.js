@@ -128,7 +128,7 @@ class Home {
                 downloadFileMultiple: 30,
                 loader: {
                     type: this.config.loader.type,
-                    build: "1.7.10-10.13.4.1614",
+                    build: this.config.loader.build,
                     enable: this.config.loader.enable,
                 },
                 verify: this.config.verify,
