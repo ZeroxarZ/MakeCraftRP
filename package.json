@@ -1,11 +1,11 @@
 {
     "name": "MakeCraftRP",
     "preductname": "MakeCraftRP Launcher",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "Serveur Minecraft RolePlay",
     "main": "src/app.js",
     "author": "ZeroxarZ",
-    "settings": "https://api.makecraftrp.com/paneladmin",
+    "settings": "https://api.makecraftrp.com",
     "engines": {
         "node": "20.x.x"
     },
