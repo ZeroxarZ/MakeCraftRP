@@ -1,7 +1,6 @@
 const builder = require('electron-builder')
 const { preductname } = require('./package.json')
 
-
 builder.build({
     config: {
         generateUpdatesFilesForAllChannels: true,
@@ -12,6 +11,10 @@ builder.build({
         directories: { "output": "dist" },
         compression: 'maximum',
         asar: true,
+        publish: {
+            provider: "github",
+            releaseType: "release", // ✅ Publication en release et non en draft
+        },
         win: {
             icon: "./src/assets/images/icon.ico",
             target: [{
