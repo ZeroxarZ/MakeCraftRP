@@ -151,12 +151,16 @@
     height: 37px;
     border-radius: 20px;
     border: none;
-    background: #00bd7a;
+    background: #b9e5ff;
     font: normal normal bold 20px/25px Poppins;
     color: #121212;
     margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    box-shadow: 0 0 5px #b9e5ff;
     cursor: pointer;
+}
+
+.play-btn:hover {
+    background: #a3dcfd;
 }
 
 .download-content {
@@ -186,7 +190,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
+    background-color: #b9e5ff;
     border-radius: 10px;
 }
 
@@ -195,9 +199,7 @@
     height: 78vh;
     margin: 3rem 2rem;
 }
-body::-webkit-scrollbar {
-    display: none; /* Pour Chromium-based browsers, donc pour Electron */
-}
+
 .news-list {
     position: relative;
     overflow: auto;
@@ -222,7 +224,7 @@ body::-webkit-scrollbar {
 .opacity-1 {
     opacity: 1;
 }
-.ytb-header,
+
 .news-header {
     position: relative;
     top: 0px;
@@ -237,7 +239,7 @@ body::-webkit-scrollbar {
 .title {
     position: absolute;
     font: normal normal bold 27px/40px Poppins;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #E1E1E1;
     display: flex;
     position: absolute;
@@ -330,6 +332,9 @@ body::-webkit-scrollbar {
     width: 65vh;
     padding-left: 1rem;
     background: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .server {
@@ -341,11 +346,10 @@ body::-webkit-scrollbar {
     transition: opacity 1s;
     opacity: .8;
 }
-.ytb,
+
 .changelog {
     position: relative;
     width: 100%;
-    margin-top: 10px;
     background-color: #292929;
     border-radius: 10px;
     transition: opacity 1s;
@@ -446,152 +450,57 @@ body::-webkit-scrollbar {
 .online.off {
     background-color: #c70707;
 }
-.ytb:hover {
-    transition: opacity 1s;
-    opacity: 1;
-}
 
-.video {
-    position: relative;
-    padding: 10px;
-    background-color: #1f1f1f;
-    font-family: Poppins;
-    font-size: 13px !important;
-    color: #E1E1E1;
-    text-decoration: none;
-    border-radius: 0px 0px 10px 10px;
-    transition: color .2s;
+.social {
     display: flex;
-    gap: 5%;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-}
-
-.youtube-thumbnail {
-    position: relative;
-    width: 95%;
-    max-width: 560px; 
-    height: 240px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-.thumbnail-img {
-    width: 95%;
-    height: 240px;
-    display: block;
-}
-
-.ytb-play-btn {
+    align-items: center;
+    gap: 10px;
     position: absolute;
+    right: 200px;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    border: none;
-    color: white;
-    font-size: 30px;
-    padding: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translateY(-50%);
 }
 
-.ytb-btn {
-    width: 200px;
+.social > a {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    background-color: lightgray;
+    opacity: 0.8;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black
+}
+
+.social > a:hover {
     border-radius: 10px;
-    padding: px;
-    background: #3436a3;
-    font: normal normal bold 15px/20px Poppins;
-    color: #ffffff;
-    box-shadow: 0 0 5px #3436a3;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 0.5rem;
+    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
 }
 
-.ytb-btn:hover {
-    background: #1f2081;
+.social > a > svg {
+    width: calc(100% - 10px);
+    height: auto;
+    fill: white;
 }
 
-
-.ytb-play-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.social > a.discord-btn {
+    background: -webkit-linear-gradient(90deg, #7289DA,#5865F2);
 }
 
-.video iframe {
-    width: 95%;
-    height: 240px;
-    border: none;
+.social > a.instagram-btn {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);;
 }
 
-.credits-container {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 0px;
+.social > a.tiktok-btn {
+    background: linear-gradient(90deg, rgba(255,0,80,1) 0%, rgba(0,242,234,1) 100%);;
 }
 
-.video-credits {
-    text-align: center;
-    font: normal normal bold 30px/40px Poppins;
-    font-size: 17px;
-    color: #d6d4d4;
+.social > a.web-btn { 
+    background-color: #0f75c5;
 }
-.advert-banner {
-    position: fixed;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    padding: 0;
-    font: normal normal bold 18px Poppins;
-    width: 100%;
-    height: 40px;
-    background-color: rgba(87, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    z-index: 9999;
-}
-
-.advert-banner .scrolling-text {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 18px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    animation: scroll 20s linear infinite;
-}
-
-.advert-banner .scrolling-text.no-scroll {
-    white-space: normal;
-    padding-left: 0;
-    animation: none;
-    display: flex;
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-}
-
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-
-
-
-
-
-

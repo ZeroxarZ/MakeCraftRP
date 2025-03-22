@@ -21,6 +21,7 @@ img {
     height: 140px;
     transition: opacity .3s, top 1.5s;
     opacity: 0;
+    border-radius: 15px;
 }
 
 .splash.opacity {

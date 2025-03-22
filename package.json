@@ -1,12 +1,12 @@
 {
-    "name": "conflictura",
-    "preductname": "Conflictura Launcher",
-    "version": "3.1.5",
-    "description": "Conflictura modded server launcher",
+    "name": "makecraftrp",
+    "preductname": "MakeCraftRP",
+    "version": "10.0.0",
+    "description": "Launcher MakeCraftRP",
     "main": "src/app.js",
-    "author": "Riptiaz/Boulldogo/Vexato/Luuxis",
-    "env": "azuriom",
-    "settings": "https://conflictura.eu/",
+    "author": "ZeroxarZ",
+    "env": "panel",
+    "settings": "https://api.makecraftrp.com",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "build": "node build.js",
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+        "url": "git+https://github.com/MakeCraftRP/MakeCraftRP.git"
     }
 }
